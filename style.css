@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+}
+
+:root {
+    --primary: rgb(187, 142, 99);
+    --primary-text: white;
+}
+
+/* Estrutura geral */
+
+body {
+    font-size: 18px;
+}
+
+main {
+    margin: 30px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Parte de Título da página */
+
+.header {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    padding: 10px;
+
+    background-color: var(--primary);
+    color: var(--primary-text);
+}
+
+.headerlink {
+    color: var(--primary-text);
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/*------------------------------*/
