@@ -3,8 +3,13 @@
 }
 
 :root {
-    --primary: rgb(187, 142, 99);
+    --primary: rgb(76, 179, 211);
     --primary-text: white;
+
+    --footer: rgb(41, 41, 41);
+    --footer-text: white;
+
+    --background: white;
 }
 
 /* Estrutura geral */
@@ -15,6 +20,7 @@ body {
 
 main {
     margin: 30px;
+    background-color: var(--background);
 }
 
 a:hover {
@@ -31,12 +37,36 @@ a:hover {
 
     background-color: var(--primary);
     color: var(--primary-text);
+
+    z-index: 5;
 }
 
 .headerlink {
     color: var(--primary-text);
     padding-left: 2%;
     padding-right: 2%;
+}
+
+/* Direitos */
+
+.footer {
+    padding: 10px;
+    background-color: var(--footer);
+    color: var(--footer-text);
+    width: 100%;
+    text-align: center;
+}
+
+/* Flexbox - Principais Viagens */
+
+.destaques {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.destaques-item {
+    list-style-type: none;
+    padding: 10px;
 }
 
 /*------------------------------*/
