@@ -102,6 +102,12 @@ header.header h1 {
   padding: 30px;
 }
 
+/* Conteúdo Principal das Páginas */
+
+section.conteudo {
+  margin: 15px;
+}
+
 /* Flexbox - Principais Viagens */
 
 .destaques {
