@@ -30,6 +30,14 @@ main {
   background-color: var(--background);
 }
 
+@media screen and (min-width: 800px) {
+  main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+
 hr {
   height: 2px;
   width: 80%;
@@ -80,6 +88,14 @@ header.header h1 {
   overflow: hidden;
 }
 
+.footer a {
+  color: var(--footer-text);
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
+
 /* Flexbox - Principais Viagens */
 
 .destaques {
@@ -119,19 +135,19 @@ header.header h1 {
 #australia {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/imagens/australia.png);
+    url(imagens/australia.png);
 }
 
 #italia {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/imagens/italia.jpg);
+    url(imagens/italia.jpg);
 }
 
 #franca {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/imagens/franca.jpg);
+    url(imagens/franca.jpg);
 }
 
 ul a {
