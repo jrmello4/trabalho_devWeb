@@ -5,15 +5,16 @@
 }
 
 :root {
-  --primary: #eedb31;
-  --secondary: #c78d11;
+  --primary: #ee9b00;
+  --secondary: #bb3e03;
 
-  --text: #ffffff;
+  --text-white: #ffffff;
+  --text-black: #001219;
 
-  --footer: #292929;
+  --footer: #001219;
   --footer-text: #ffffff;
 
-  --background: #ffffff;
+  --background: #fefae0;
 }
 
 /* Estrutura geral */
@@ -23,6 +24,7 @@ body {
   overflow-x: hidden;
   margin: 0px;
   background-color: var(--footer);
+  color: var(--text-black);
 }
 
 main {
@@ -36,7 +38,6 @@ main {
     padding-right: 40px;
   }
 }
-
 
 hr {
   height: 2px;
@@ -56,13 +57,13 @@ hr {
   width: 100%;
 
   background-color: var(--primary);
-  color: var(--text);
+  color: var(--text-white);
 
   z-index: 5;
 }
 
 .headerlink {
-  color: var(--text);
+  color: var(--text-white);
   padding-left: 2%;
   padding-right: 2%;
   text-decoration: none;
@@ -86,6 +87,7 @@ header.header h1 {
   width: 100%;
   text-align: center;
   overflow: hidden;
+  min-height: 300px;
 }
 
 .footer a {
@@ -94,6 +96,10 @@ header.header h1 {
 
 .footer a:hover {
   text-decoration: none;
+}
+
+.contatos {
+  padding: 30px;
 }
 
 /* Flexbox - Principais Viagens */
@@ -151,7 +157,7 @@ header.header h1 {
 }
 
 ul a {
-  color: var(--text);
+  color: var(--text-white);
   text-decoration: none;
   overflow: hidden;
 }
