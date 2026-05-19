@@ -20,7 +20,7 @@
 
 body {
   font-size: 18px;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0px;
   background-color: var(--footer);
 }
