@@ -5,15 +5,15 @@
 }
 
 :root {
-    --primary: rgb(76, 179, 211);
-    --secondary: rgb(19, 122, 153);
+    --primary: #eedb31;
+    --secondary: #c78d11;
 
-    --text: white;
+    --text: #ffffff;
 
-    --footer: rgb(41, 41, 41);
-    --footer-text: white;
+    --footer: #292929;
+    --footer-text: #ffffff;
 
-    --background: white;
+    --background: #ffffff;
 }
 
 /* Estrutura geral */
@@ -22,11 +22,19 @@ body {
     font-size: 18px;
     overflow: hidden;
     margin: 0px;
+    background-color: var(--footer);
 }
 
 main {
-    margin-top: 100px;
+    padding-top: 100px;
     background-color: var(--background);
+}
+
+hr {
+    height: 2px;
+    width: 80%;
+    color: var(--footer);
+    background-color: var(--footer);
 }
 
 /* Parte de Título da página */
@@ -54,6 +62,7 @@ main {
 
 .headerlink:hover {
     background-color: var(--secondary);
+    transition: background 0.2s ease;
 }
 
 header.header h1 {
@@ -80,16 +89,25 @@ header.header h1 {
     column-gap: 20px;
     justify-content: center;
     padding: 10px;
+    margin: 0px;
 }
 
 .destaques-item {
     list-style-type: none;
     padding: 40px;
-    height: 350px;
-    width: 200px;
+    height: 280px;
+    width: 150px;
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    overflow: hidden;
+}
+
+.destaques-item:hover {
+    transform: scale(1.1);
+    transition: 0.5s linear;
 }
 
 @media screen and (min-width:800px) {
@@ -116,6 +134,16 @@ header.header h1 {
 ul a{
     color: var(--text);
     text-decoration: none;
+    overflow: hidden;
 }
 
+li.destaques-item span {
+    background-color: var(--secondary);
+}
+
+h4 span{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+    
 /*------------------------------*/
