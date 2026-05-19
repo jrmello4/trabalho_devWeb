@@ -1,149 +1,165 @@
 * {
-    text-align: center;
-    overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
-    --primary: #eedb31;
-    --secondary: #c78d11;
+  --primary: #eedb31;
+  --secondary: #c78d11;
 
-    --text: #ffffff;
+  --text: #ffffff;
 
-    --footer: #292929;
-    --footer-text: #ffffff;
+  --footer: #292929;
+  --footer-text: #ffffff;
 
-    --background: #ffffff;
+  --background: #ffffff;
 }
 
 /* Estrutura geral */
 
 body {
-    font-size: 18px;
-    overflow: hidden;
-    margin: 0px;
-    background-color: var(--footer);
+  font-size: 18px;
+  overflow: hidden;
+  margin: 0px;
+  background-color: var(--footer);
 }
 
 main {
-    padding-top: 100px;
-    background-color: var(--background);
+  padding-top: 100px;
+  background-color: var(--background);
 }
 
 hr {
-    height: 2px;
-    width: 80%;
-    color: var(--footer);
-    background-color: var(--footer);
+  height: 2px;
+  width: 80%;
+  color: var(--footer);
+  background-color: var(--footer);
 }
 
 /* Parte de Título da página */
 
 .header {
-    position: fixed;
-    top: 0;
-    text-align: center;
-    padding-top: 10px;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  padding-top: 10px;
 
-    width:100%;
+  width: 100%;
 
-    background-color: var(--primary);
-    color: var(--text);
+  background-color: var(--primary);
+  color: var(--text);
 
-    z-index: 5;
+  z-index: 5;
 }
 
 .headerlink {
-    color: var(--text);
-    padding-left: 2%;
-    padding-right: 2%;
-    text-decoration: none;
+  color: var(--text);
+  padding-left: 2%;
+  padding-right: 2%;
+  text-decoration: none;
 }
 
 .headerlink:hover {
-    background-color: var(--secondary);
-    transition: background 0.2s ease;
+  background-color: var(--secondary);
+  transition: background 0.2s ease;
 }
 
 header.header h1 {
-    margin: 5px;
+  margin: 5px;
 }
 
 /* Parte de Baixo da página */
 
 .footer {
-    padding: 10px;
-    background-color: var(--footer);
-    color: var(--footer-text);
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
+  padding: 10px;
+  background-color: var(--footer);
+  color: var(--footer-text);
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
 }
 
 /* Flexbox - Principais Viagens */
 
 .destaques {
-    display: flex;
-    flex-flow: row wrap;
-    row-gap: 20px;
-    column-gap: 20px;
-    justify-content: center;
-    padding: 10px;
-    margin: 0px;
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+  justify-content: center;
+  padding: 10px;
+  margin: 0px;
 }
 
 .destaques-item {
-    list-style-type: none;
-    padding: 40px;
-    height: 280px;
-    width: 150px;
+  list-style-type: none;
+  padding: 40px;
+  height: 280px;
+  width: 150px;
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .destaques-item:hover {
-    transform: scale(1.1);
-    transition: 0.5s linear;
+  transform: scale(1.1);
+  transition: 0.5s linear;
 }
 
-@media screen and (min-width:800px) {
-    .destaques {
-        padding: 40px;
-    }
+@media screen and (min-width: 800px) {
+  .destaques {
+    padding: 40px;
+  }
 }
 
 #australia {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/imagens/australia.png);
 }
 
 #italia {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/imagens/italia.jpg);
 }
 
 #franca {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/imagens/franca.jpg);
 }
 
-ul a{
-    color: var(--text);
-    text-decoration: none;
-    overflow: hidden;
+ul a {
+  color: var(--text);
+  text-decoration: none;
+  overflow: hidden;
 }
 
 li.destaques-item span {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
-h4 span{
-    padding-left: 10px;
-    padding-right: 10px;
+h4 span {
+  padding-left: 10px;
+  padding-right: 10px;
 }
-    
+
 /*------------------------------*/
+
+/* Galeria de Imagens */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.gallery img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
