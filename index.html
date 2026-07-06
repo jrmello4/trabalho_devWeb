@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viagens Hoje</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Importação do AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 
@@ -28,13 +27,12 @@
             <p>Conheça lugares novos e tenha momentos inesquecíveis!</p>
         </section>
 
-        <!-- SUA LISTA ORIGINAL (Com botões integrados) -->
         <ul class="destaques" id="destaques">
             <li class="destaques-item" id="italia">
                 <a href="italia.html">
                     <h4><span> Itália </span></h4>
                 </a>
-                <button ng-click="adicionarAoCarrinho('italia')" style="margin-top: 10px; padding: 5px 10px; cursor: pointer; font-weight: bold; background: #007bff; color: white; border: none; border-radius: 4px;">
+                <button ng-click="adicionarAoCarrinho('italia')" class="btn-reservar">
                     Reservar Pacote
                 </button>
             </li>
@@ -43,7 +41,7 @@
                 <a href="franca.html">
                     <h4><span> França </span></h4>
                 </a>
-                <button ng-click="adicionarAoCarrinho('franca')" style="margin-top: 10px; padding: 5px 10px; cursor: pointer; font-weight: bold; background: #007bff; color: white; border: none; border-radius: 4px;">
+                <button ng-click="adicionarAoCarrinho('franca')" class="btn-reservar">
                     Reservar Pacote
                 </button>
             </li>
@@ -52,7 +50,7 @@
                 <a href="australia.html">
                     <h4><span> Australia </span></h4>
                 </a>
-                <button ng-click="adicionarAoCarrinho('australia')" style="margin-top: 10px; padding: 5px 10px; cursor: pointer; font-weight: bold; background: #007bff; color: white; border: none; border-radius: 4px;">
+                <button ng-click="adicionarAoCarrinho('australia')" class="btn-reservar">
                     Reservar Pacote
                 </button>
             </li>
@@ -60,9 +58,8 @@
         
         <hr>
 
-        
         <section class="conteudo" ng-if="carrinho.length > 0" style="margin: 30px auto; max-width: 500px; background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px dashed #007bff; color: #333; text-align: left;">
-            <h3 style="margin-top: 0; text-align: center;">☆ Detalhes da sua Reserva</h3>
+            <h3 style="margin-top: 0; text-align: center;">🛒 Detalhes da sua Reserva</h3>
             
             <div ng-repeat="item in carrinho track by $index" style="padding: 10px 0; border-bottom: 1px solid #eee;">
                 <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1em;">
@@ -80,8 +77,7 @@
                 Total: <span style="color: #28a745;">R$ {{calcularTotal()}},00</span>
             </h4>
 
-            <!-- Botão de Finalizar -->
-            <button ng-click="finalizarReserva()" style="width: 100%; padding: 10px; font-size: 1.1em; font-weight: bold; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">
+            <button ng-click="finalizarReserva()" class="btn-finalizar">
                 Finalizar Reserva
             </button>
         </section>
