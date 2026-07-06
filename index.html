@@ -9,8 +9,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 
-<body ng-app="lojaApp" ng-controller="LojaController">
+<body ng-app="lojaApp" ng-controller="LojaController"></body>
 
+<body>
     <header class="header">
         <h1>Viagens Hoje</h1>
         <nav>
@@ -23,64 +24,34 @@
     <main>
         <section class="conteudo">
             <h2>Viagens feitas para Você!</h2>
+
             <hr style="width: 60%" />
+
             <p>Conheça lugares novos e tenha momentos inesquecíveis!</p>
         </section>
-
-        <ul class="destaques" id="destaques">
-            <li class="destaques-item" id="italia">
-                <a href="italia.html">
+        <ul class="destaques">
+            <a href="italia.html">
+                <li class="destaques-item" id="italia">
                     <h4><span> Itália </span></h4>
-                </a>
-                <button ng-click="adicionarAoCarrinho('italia')" class="btn-reservar">
-                    Reservar Pacote
-                </button>
-            </li>
+                </li>
+            </a>
 
-            <li class="destaques-item" id="franca">
-                <a href="franca.html">
+            <a href="franca.html">
+                <li class="destaques-item" id="franca">
                     <h4><span> França </span></h4>
-                </a>
-                <button ng-click="adicionarAoCarrinho('franca')" class="btn-reservar">
-                    Reservar Pacote
-                </button>
-            </li>
+                </li>
+            </a>
 
-            <li class="destaques-item" id="australia">
-                <a href="australia.html">
-                    <h4><span> Australia </span></h4>
-                </a>
-                <button ng-click="adicionarAoCarrinho('australia')" class="btn-reservar">
-                    Reservar Pacote
-                </button>
-            </li>
+            <a href="australia.html">
+                <li class="destaques-item" id="australia">
+                    <h4>
+                        <span> Australia </span>
+                    </h4>
+                </li>
+            </a>
         </ul>
         
         <hr>
-
-        <section class="conteudo" ng-if="carrinho.length > 0" style="margin: 30px auto; max-width: 500px; background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px dashed #007bff; color: #333; text-align: left;">
-            <h3 style="margin-top: 0; text-align: center;">🛒 Detalhes da sua Reserva</h3>
-            
-            <div ng-repeat="item in carrinho track by $index" style="padding: 10px 0; border-bottom: 1px solid #eee;">
-                <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1em;">
-                    <span>{{item.bandeira}} {{item.nome}}</span>
-                    <span style="color: #28a745;">R$ {{item.preco}},00</span>
-                </div>
-                <div style="font-size: 0.9em; color: #555; margin-top: 5px; padding-left: 5px;">
-                    <p style="margin: 2px 0;">✈️ <strong>Passagem:</strong> {{item.passagem}}</p>
-                    <p style="margin: 2px 0;">🏨 <strong>Hospedagem:</strong> {{item.hospedagem}}</p>
-                    <p style="margin: 2px 0;">🏛️ <strong>Passeios públicos:</strong> {{item.passeios}}</p>
-                </div>
-            </div>
-
-            <h4 style="text-align: right; font-size: 1.2em; margin-top: 15px; margin-bottom: 15px;">
-                Total: <span style="color: #28a745;">R$ {{calcularTotal()}},00</span>
-            </h4>
-
-            <button ng-click="finalizarReserva()" class="btn-finalizar">
-                Finalizar Reserva
-            </button>
-        </section>
 
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, natus? Temporibus eum, doloribus obcaecati nemo minus, rem alias laborum, esse assumenda magni ab nesciunt excepturi laboriosam molestias harum odit non.
@@ -93,6 +64,7 @@
 
         <section class="contatos">
             <h3> Este site foi baseado nos seguintes sites abaixo </h3>
+
             <a href="https://www.tripadvisor.com.br/Articles-lWoXu3ETbus0-Best_places_to_stargaze.html">
                 <p>TripAdvisor.com "Best Places to Stargaze"</p>
             </a>
@@ -103,8 +75,6 @@
 
         <small> Todos os direitos reservados. </small>
     </footer>
-
-    <script src="app.js"></script>
 </body>
 
 </html>
