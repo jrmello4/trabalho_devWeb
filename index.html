@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viagens Hoje</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 
-<body ng-app="lojaApp" ng-controller="LojaController"></body>
-
 <body>
+
     <header class="header">
         <h1>Viagens Hoje</h1>
         <nav>
@@ -24,34 +22,29 @@
     <main>
         <section class="conteudo">
             <h2>Viagens feitas para Você!</h2>
-
             <hr style="width: 60%" />
-
             <p>Conheça lugares novos e tenha momentos inesquecíveis!</p>
         </section>
-        <ul class="destaques">
-            <a href="italia.html">
-                <li class="destaques-item" id="italia">
+
+        <ul class="destaques" id="destaques">
+            <li class="destaques-item" id="italia">
+                <a href="italia.html">
                     <h4><span> Itália </span></h4>
-                </li>
-            </a>
+                </a>
+            </li>
 
-            <a href="franca.html">
-                <li class="destaques-item" id="franca">
+            <li class="destaques-item" id="franca">
+                <a href="franca.html">
                     <h4><span> França </span></h4>
-                </li>
-            </a>
+                </a>
+            </li>
 
-            <a href="australia.html">
-                <li class="destaques-item" id="australia">
-                    <h4>
-                        <span> Australia </span>
-                    </h4>
-                </li>
-            </a>
+            <li class="destaques-item" id="australia">
+                <a href="australia.html">
+                    <h4><span> Australia </span></h4>
+                </a>
+            </li>
         </ul>
-        
-        <hr>
 
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, natus? Temporibus eum, doloribus obcaecati nemo minus, rem alias laborum, esse assumenda magni ab nesciunt excepturi laboriosam molestias harum odit non.
@@ -64,7 +57,6 @@
 
         <section class="contatos">
             <h3> Este site foi baseado nos seguintes sites abaixo </h3>
-
             <a href="https://www.tripadvisor.com.br/Articles-lWoXu3ETbus0-Best_places_to_stargaze.html">
                 <p>TripAdvisor.com "Best Places to Stargaze"</p>
             </a>
@@ -75,6 +67,6 @@
 
         <small> Todos os direitos reservados. </small>
     </footer>
-</body>
 
+</body>
 </html>
